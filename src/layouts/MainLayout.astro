@@ -1,0 +1,12 @@
+---
+import "../styles/global.css";
+
+interface Props {
+    title: string;
+    description?: string;
+}
+
+const {title, description="Diseño Web e internacionalización"} = Astro.props;
+
+const lang = Astro.currentLocale ?? "es";
+---
