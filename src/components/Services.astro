@@ -1,0 +1,16 @@
+---
+import { useTranslations, defaultLang, type Lang, type TranslationKey } from "../i18n";
+
+const lang = (Astro.currentLocale ?? "es") as Lang;
+const t = useTranslations(lang);
+
+const servicios:{
+    titulo: TranslationKey;
+    texto: TranslationKey;
+    destacado?: boolean;
+}[] = [
+    {titulo: "services.design.title", texto: "services.design.text"},
+    {titulo: "services.i18n.title", texto:"services.i18n.text"},
+    {titulo: "services.optimization.title", texto: "services.optimization.text"}
+]
+---
