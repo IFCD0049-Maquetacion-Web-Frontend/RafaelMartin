@@ -51,12 +51,33 @@ const opciones = [
                 >
             </div>
             <div class="mb-4">
-                <label for=""></label>
-                <input type="text">
+                <label for="company" class="mb-1 block font-semibold"></label>
+                <input 
+                type="text"
+                id="company"
+                name="company"
+                required
+                autocomplete="organization"
+                class={claseCampo}
+                >
             </div>
             <div class="mb-4">
-                <label for=""></label>
-                <input type="text">
+                <label for="services" class="mb-1 block font-semibold">{t("form.service")}</label>
+                <select id="services" name="services" required class={claseCampo}>
+                    <option value="" disabled selected> 
+                        {t("form.service.placeholder")}
+                    </option>
+                    {
+                        opciones.map(({value, label}) => (
+                            <option value={value}>{label}</option>
+                        ))
+                    }
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="message" class="mb-1 block font-semibold">{t("form.message")}</label>
+                <textarea id="message" name="message" rows="5" required class={claseCampo}></textarea>
             </div>
         </form>
     </div>
