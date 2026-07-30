@@ -26,14 +26,29 @@ const opciones = [
         method="post"
         class="max-w-2xl rounded-2xl border border-slate-200 gb-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.08)]"
         >
-            <input type="text">
+            <input type="hidden" name="lang" value={lang}>
             <div class="mb-4">
-                <label for=""></label>
-                <input type="text">
+                <label for="name" class="mb-1 block font-semibold">{t("form.name")}</label>
+                <input 
+                type="text" 
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                class={claseCampo}
+                >
             </div>
             <div class="mb-4">
-                <label for=""></label>
-                <input type="text">
+                <label for="email" class="mb-1 block font-semibold">{t("form.email")}</label>
+                <input 
+                type="text" 
+                id="email"
+                name="name"
+                required
+                autocomplete="email"
+                aria-labelledby ="email-help"
+                class={claseCampo}
+                >
             </div>
             <div class="mb-4">
                 <label for=""></label>
