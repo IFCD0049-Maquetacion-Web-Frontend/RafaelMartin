@@ -1,0 +1,8 @@
+---
+import { useTranslations, defaultLang, type Lang } from "../i18n";
+
+const lang = (Astro.currentLocale ?? "es") as Lang;
+const t = useTranslations(lang);
+
+const claseCampo = "w-full rounded-lg border-slate-200 p-3 focus:border-blue-700 focus:outline-2 focus:outline-offset-0 focus:outline-blue-700";
+---
